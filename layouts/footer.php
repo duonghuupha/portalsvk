@@ -2,7 +2,7 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">NATUREM.US</span>
+							<span class="blue bolder">SVKHERBAL.COM</span>
 							Application &copy; <?php echo date("Y") - 1 ?>-<?php echo date("Y") ?>
 						</span>
 						&nbsp; &nbsp;

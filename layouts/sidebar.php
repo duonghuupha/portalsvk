@@ -51,34 +51,6 @@
             <b class="arrow"></b>
         </li>
         <li class="hover">
-            <a href="<?php echo URL.'/products' ?>">
-                <i class="menu-icon fa fa-laptop"></i>
-                <span class="menu-text"> Sản phẩm </span>
-            </a>
-            <b class="arrow"></b>
-        </li>
-        <li class="hover">
-            <a href="<?php echo URL.'/orders' ?>">
-                <i class="menu-icon fa fa-shopping-cart"></i>
-                <span class="menu-text"> Đơn hàng </span>
-            </a>
-            <b class="arrow"></b>
-        </li>
-        <li class="hover">
-            <a href="<?php echo URL.'/customers' ?>">
-                <i class="menu-icon fa fa-user"></i>
-                <span class="menu-text"> Quản lý khách hàng </span>
-            </a>
-            <b class="arrow"></b>
-        </li>
-        <li class="hover">
-            <a href="<?php echo URL.'/maketing' ?>">
-                <i class="menu-icon fa fa-gift"></i>
-                <span class="menu-text"> Maketing </span>
-            </a>
-            <b class="arrow"></b>
-        </li>
-        <li class="hover">
             <a href="<?php echo URL.'/decoration' ?>">
                 <i class="menu-icon fa fa-crop"></i>
                 <span class="menu-text"> Giao diện </span>
@@ -95,7 +67,7 @@
         <li class="hover">
             <a href="<?php echo URL.'/users' ?>">
                 <i class="menu-icon fa fa-users"></i>
-                <span class="menu-text"> Quản lý người dùng </span>
+                <span class="menu-text"> Người dùng </span>
             </a>
             <b class="arrow"></b>
         </li>

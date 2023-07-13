@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Naturem :: System manger</title>
+		<title>SvkHerbal :: System manger</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<link rel="stylesheet" href="<?php echo URL ?>/styles/css/roboto.css" />
@@ -26,7 +26,7 @@
 		<script src="<?php echo URL ?>/styles/js/jquery-2.1.4.min.js"></script>
 		<script src="<?php echo URL ?>/styles/js/ace-extra.min.js"></script>
 		<script>
-			var baseUrl = '<?php echo URL ?>', base_front = '<?php echo URL_FRONT ?>';
+			var baseUrl = '<?php echo URL ?>';
 		</script>
 		<script src="<?php echo URL ?>/public/scripts/library.js"></script>
 		<!-----Ckeditor------>

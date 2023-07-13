@@ -8,8 +8,8 @@ class Category_Model extends Model{
         $result = array();
         $query = $this->db->query("SELECT COUNT(*) AS Total FROM tbl_category");
         $row = $query->fetchAll();
-        $query = $this->db->query("SELECT id, title, description, image, status, create_at FROM tbl_category
-                                    ORDER BY id DESC LIMIT $offset, $rows");
+        $query = $this->db->query("SELECT id, title, description, image, status, create_at, code 
+                                    FROM tbl_category ORDER BY id DESC LIMIT $offset, $rows");
         $result['total'] = $row[0]['Total'];
         $result['rows'] = $query->fetchAll();
         return $result;
@@ -28,6 +28,11 @@ class Category_Model extends Model{
     function delObj($id){
         $query = $this->delete("tbl_category", "id = $id");
         return $query;
+    }
+
+    function get_info($id){
+        $query = $this->db->query("SELECT * FROM tbl_category WHERE id = $id");
+        return $query->fetchAll();
     }
 }
 ?>

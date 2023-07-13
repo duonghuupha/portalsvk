@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Naturem :: Login System</title>
+		<title>SvkHerbal :: Login System</title>
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<link rel="stylesheet" href="<?php echo URL.'/styles' ?>/css/roboto.css" />
@@ -35,7 +35,7 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">Naturem</span>
+									<span class="red">SvkHerbal</span>
 									<span class="grey" id="id-text2">Manager</span>
 								</h1>
 								<h4 class="blue" id="id-company-text">&copy; SvkHerbal</h4>
@@ -64,17 +64,6 @@
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
-													<!--<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<img src="<?php echo URL.'/index/captcha' ?>"/>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Mã xác nhận" name="captcha" id="captcha"/>
-															<i class="ace-icon fa fa-barcode"></i>
-														</span>
-													</label>-->
 													<div class="space"></div>
 													<div class="clearfix">
 														<label class="inline">
@@ -108,7 +97,7 @@
 										<div class="toolbar clearfix">
 											<div>
 												<a href="javascript:void(0)" data-target="#forgot-box" class="forgot-password-link">
-													Naturem - SvkHerbal
+													SvkHerbal
 												</a>
 											</div>
 										</div>
