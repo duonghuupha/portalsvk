@@ -30,7 +30,7 @@ $array_type_menu = ['Một bài viết', 'Danh sách bài viết', 'Liên hệ',
         <tr role="row" class="<?php echo $class ?>">
             <td class="text-center"><?php echo $i ?></td>
             <td class="text-center"><?php echo $row['code'] ?></td>
-            <td><i><?php echo ($row['parent_id'] == 0) ? 'Danh mục gốc' : $this->_Data->return_title_menu_parent($row['parent_id)']) ?></i></td>
+            <td><i><?php echo ($row['parent_id'] == 0) ? 'Danh mục gốc' : $this->_Data->return_title_menu_parent($row['parent_id']) ?></i></td>
             <td id="title_<?php echo $row['id'] ?>"><?php echo $row['title'] ?></td>
             <td class="text-center"><?php echo $array_type_menu[$row['type_menu']- 1] ?></td>
             <td class="text-center"><?php echo ($row['position'] == 1) ? 'Menu top' : 'Menu bottom' ?></td>

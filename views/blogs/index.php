@@ -41,7 +41,7 @@
 
 <!--Form don vi tinh-->
 <div id="modal-data" class="modal fade" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog" style="width:70%">
+    <div class="modal-dialog" style="width:90%">
         <div class="modal-content" id="form">
             <div class="modal-header no-padding">
                 <div class="table-header">
@@ -53,55 +53,65 @@
                     <form id="fm" method="post" enctype="multipart/form-data">
                         <input id="noidung" name="noidung" type="hidden"/>
                         <input id="image_old" name="image_old" type="hidden"/>
-                        <div class="col-xs-6">
-                            <div class="form-group">
-                                <label for="form-field-username">Lựa chọn danh mục</label>
-                                <div>
-                                    <select name="cate_id" id="cate_id" required="" class="select2"
-                                    data-placeholder="Lựa chọn danh mục" style="width:100%"></select>
+                        <div class="col-xs-3">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">Lựa chọn danh mục</label>
+                                    <div>
+                                        <select name="cate_id" id="cate_id" required="" class="select2"
+                                        data-placeholder="Lựa chọn danh mục" style="width:100%"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">Ảnh đại diện</label>
+                                    <div>
+                                        <input type="file" id="image" name="image" class="file_attach" 
+                                        style="width:100%"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="display_img_detail" id="display_img_detail" type="checkbox" class="ace"
+                                        checked="">
+                                        <span class="lbl"> Hiển thị ảnh trong chi tiết</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-6">
-                            <div class="form-group">
-                                <label for="form-field-username">Ảnh đại diện</label>
-                                <div>
-                                    <input type="file" id="image" name="image" class="file_attach" 
-                                    style="width:100%"/>
+                        <div class="col-xs-9">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">
+                                        Tiêu đề bài viết 
+                                    </label>
+                                    <div>
+                                        <input type="text" id="title" name="title" required=""
+                                        placeholder="Tiêu đề bài viết" style="width:100%" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="form-group">
-                                <label for="form-field-username">
-                                    Tiêu đề bài viết 
-                                    <i style="font-size:10px;">(Tối đa 70 ký tự)</i>
-                                </label>
-                                <div>
-                                    <input type="text" id="title" name="title" required="" maxlength="70"
-                                    placeholder="Tiêu đề bài viết" style="width:100%" />
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="form-field-username" style="width:100%">
+                                        Nội dung tóm tắt
+                                    </label>
+                                    <div>
+                                        <textarea type="text" id="description" name="description" required=""
+                                        placeholder="Nội dung tóm tắt bài viết" style="width:100%;height:100px;resize:none"></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="form-group">
-                                <label for="form-field-username" style="width:100%">
-                                    Nội dung tóm tắt 
-                                    <i style="font-size:10px;">(Từ 150 đến 200 ký tự)</i>
-                                    <span class="pull-right"><span id="count_char">0</span>/200</span>
-                                </label>
-                                <div>
-                                    <textarea type="text" id="description" name="description" required="" maxlength="200" onkeyup="doThis()"
-                                    placeholder="Nội dung tóm tắt bài viết" style="width:100%;height:100px;resize:none"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="form-group">
-                                <label for="form-field-username">Nội dung chi tiết bài viết</label>
-                                <div>
-                                    <textarea type="text" id="content" name="content" required="" 
-                                    placeholder="Nội dung chi tiết bài viết" style="width:100%;height:120px;resize:none"></textarea>
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="form-field-username">Nội dung chi tiết bài viết</label>
+                                    <div>
+                                        <textarea type="text" id="content" name="content" required="" 
+                                        placeholder="Nội dung chi tiết bài viết" style="width:100%;height:120px;resize:none"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>

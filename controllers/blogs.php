@@ -27,8 +27,10 @@ class Blogs extends Controller{
         $content = addslashes($_REQUEST['noidung']);
         $image = $this->_Convert->convert_file($_FILES['image']['name'], 'content_blogs');
         $create_at = date("Y-m-d H:i:s"); $active = 1;
+        $display = (isset($_REQUEST['display_img_detail']) && $_REQUEST['display_img_detail'] != '') ? 0 : 1;
         $data = array("code" => $code, "cate_id" => $cate, "title" => $title, "description" => $desc,
-                        "content" => $content, "image" => $image, "create_at" => $create_at, "status" => $active);
+                        "content" => $content, "image" => $image, "create_at" => $create_at, 
+                        "status" => $active, "display_img_detail" => $display);
         $temp = $this->model->addObj($data);
         if($temp){
             if(move_uploaded_file($_FILES['image']['tmp_name'], DIR_UPLOAD.'/images/blogs/content/'.$image)){
@@ -54,8 +56,10 @@ class Blogs extends Controller{
         $content = addslashes($_REQUEST['noidung']);
         $image = ($_FILES['image']['name'] != '') ? $this->_Convert->convert_file($_FILES['image']['name'], 'content_blog') : $img;
         $create_at = date("Y-m-d H:i:s"); $active = 1;
+        $display = (isset($_REQUEST['display_img_detail']) && $_REQUEST['display_img_detail'] != '') ? 0 : 1;
         $data = array("cate_id" => $cate, "title" => $title, "description" => $desc,
-                        "content" => $content, "image" => $image, "create_at" => $create_at);
+                        "content" => $content, "image" => $image, "create_at" => $create_at,
+                        "display_img_detail" => $display);
         $temp = $this->model->updateObj($id, $data);
         if($temp){
             if($_FILES['image']['name'] != ''){

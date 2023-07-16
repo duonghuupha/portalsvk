@@ -17,6 +17,11 @@ function edit(idh){
         $('#title').val(data.title); $('#description').val(data.description);
         CKEDITOR.instances['content'].setData(data.content); $('#image_old').val(data.image);
         $('#cate_id').val(data.cate_id).trigger('change');
+        if(data.display_img_detail == 0){
+            $('#display_img_detail').prop('checked', true);
+        }else{
+            $('#display_img_detail').prop('checked', false);
+        }
     });
     $('.file_attach').ace_file_input('reset_input');
     url = baseUrl + '/blogs/update?id='+btoa(idh);
