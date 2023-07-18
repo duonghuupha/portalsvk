@@ -1,6 +1,5 @@
 <?php
 $jsonObj = $this->jsonObj; $perpage = $this->perpage; $pages = $this->page;
-$array_type_menu = ['Một bài viết', 'Danh sách bài viết', 'Liên hệ', 'Liên kết ngoài'];
 ?>
 <table 
     id="dynamic-table" 
@@ -14,7 +13,7 @@ $array_type_menu = ['Một bài viết', 'Danh sách bài viết', 'Liên hệ',
             <th class="">Tiêu đề</th>
             <th class="text-center">Thứ tự</th>
             <th class="text-center" style="width:80px;">Kích hoạt</th>
-            <th class="text-center" style="width:100px;">Thao tác</th>
+            <th class="text-center" style="width:80px;">Thao tác</th>
         </tr>
     </thead>
     <tbody>
@@ -27,7 +26,9 @@ $array_type_menu = ['Một bài viết', 'Danh sách bài viết', 'Liên hệ',
         <tr role="row" class="<?php echo $class ?>">
             <td class="text-center"><?php echo $i ?></td>
             <td class="text-center"><?php echo $row['code'] ?></td>
-            <td><?php echo $row['title'] ?></td>
+            <td>
+                <?php echo $row['title'] ?>         
+            </td>
             <td class="text-center" style="cursor: pointer" ondblclick="edit_cell(<?php echo $row['id'].', '.$row['order_block'] ?>)">
                 <span id="orderblock_<?php echo $row['id'] ?>"><?php echo $row['order_block'] ?></span>
                 <input id="order_<?php echo $row['id'] ?>" name="order_<?php echo $row['id'] ?>"

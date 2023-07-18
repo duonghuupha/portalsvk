@@ -1,6 +1,7 @@
 var url = '', page = 1;
 $(function(){
     $('#list-data').load(baseUrl + '/decoration/json');
+    $('#btn_slide').hide();
 });
 
 function add(){
@@ -41,4 +42,11 @@ function edit_cell(idh, value){
 function save_cell(idh){
     var data_str = "id="+btoa(idh)+'&value='+$('#order_'+idh).val()+'&type=2';
     del_data(data_str, "Bạn có chắc chắn muốn thay đổi vị trí của block?", baseUrl + '/decoration/change', '#list-data', baseUrl + '/decoration/json?page='+page);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+function edit(idh){
+    if(idh == 1){
+        $('#content-decoration').load(baseUrl + '/slide/json');
+        $('#btn_slide').show();
+    }
 }
