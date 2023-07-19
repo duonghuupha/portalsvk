@@ -23,7 +23,8 @@
                     <h3 class="header smaller lighter blue" style="margin-top:0">
                         Cập nhật dữ liệu
                         <small class="pull-right" id="btn_slide">
-                            <button type="button" class="btn btn-primary btn-sm" onclick="add_slide()">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="add_slide()"
+                            id="btn_block">
                                 <i class="fa fa-plus"></i>
                                 Thêm mới
                             </button>
@@ -105,3 +106,5 @@
 
 <script src="<?php echo URL.'/public/' ?>scripts/decoration/index.js"></script>
 <script src="<?php echo URL.'/public/' ?>scripts/decoration/slide.js"></script>
+<script src="<?php echo URL.'/public/' ?>scripts/decoration/block_two.js"></script>
+<script src="<?php echo URL.'/public/' ?>scripts/decoration/block_four.js"></script>
