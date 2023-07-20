@@ -46,6 +46,28 @@ if(!isset($_SESSION['data'])){
                                 Đăng xuất
                             </a>
                         </li>
+                        <li class="divider"></li>
+                        <?php
+                        if(isset($_SESSION['lang'])){
+                        ?>
+                        <li>
+                            <a href="<?php echo URL.'/index/change_lang?lang=vi' ?>">
+                                <i class="ace-icon fa fa-flag"></i>
+                                Việt Nam
+                            </a>
+                        </li>
+                        <?php
+                        }else{
+                        ?>
+                        <li>
+                            <a href="<?php echo URL.'/index/change_lang?lang=en' ?>">
+                                <i class="ace-icon fa fa-flag"></i>
+                                Enghlish
+                            </a>
+                        </li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </li>
             </ul>

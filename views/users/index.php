@@ -21,7 +21,6 @@
         <div class="page-content">
             <div class="page-header">
                 <h1>
-                    Quản lý người dùng
                     <small class="pull-right">
                         <button type="button" class="btn btn-primary btn-sm" onclick="add()">
                             <i class="fa fa-plus"></i>

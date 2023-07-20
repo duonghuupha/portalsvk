@@ -39,5 +39,16 @@ class Index extends Controller{
         header('Location: '.URL.'/index/login');
         exit;
     }
+
+    function change_lang(){
+        $lang = $_REQUEST['lang'];
+        if($lang == 'vi'){
+            unset($_SESSION['lang']);
+            header('Location: /');
+        }else{
+            $_SESSION['lang'] = 'en';
+            header('Location: /');
+        }
+    }
 }
 ?>
