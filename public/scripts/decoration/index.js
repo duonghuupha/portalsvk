@@ -73,6 +73,8 @@ function edit(idh){
         $('#btn_block').attr('onclick', '');
         $('#btn_slide').hide();
     }else if(idh == 10){
-
+        $('#content-decoration').load(baseUrl + '/block_ten/json');
+        $('#btn_block').attr('onclick', 'add_block_10()');
+        $('#btn_slide').show();
     }
 }
