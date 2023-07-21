@@ -53,7 +53,9 @@ function edit(idh){
         $('#btn_block').attr('onclick', 'add_block_2()');
         $('#btn_slide').show();
     }else if(idh == 3){
-
+        $('#content-decoration').load(baseUrl + '/block_three/json');
+        $('#btn_block').attr('onclick', 'add_block_3()');
+        $('#btn_slide').show();
     }else if(idh == 4){
         $('#content-decoration').load(baseUrl + '/block_four/form');
         $('#btn_block').attr('onclick', '');
