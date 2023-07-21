@@ -36,12 +36,12 @@ class Block_six_Model extends Model{
     }
 
     function get_block_6_title(){
-        $query = $this->db->query("SELECT * FROM tbl_block_6_title WHERE id = 1");
+        $query = $this->db->query("SELECT * FROM tbl_block_6_global WHERE id = 1");
         return $query->fetchAll();
     }
 
     function updateObj_title($data){
-        $query = $this->update("tbl_block_6_title", $data, "id = 1");
+        $query = $this->update("tbl_block_6_global", $data, "id = 1");
         return $query;
     }
 }

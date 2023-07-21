@@ -40,7 +40,7 @@ function check_size_block_6(){
                 image.onload = function () {
                     var height = this.height;
                     var width = this.width;
-                    if (height != 370 || width != 334){
+                    if (height != 334 || width != 370){
                         show_message("error", "Kích thước ảnh không đúng");
                         $('.file_attach').ace_file_input('reset_input'); 
                     }
@@ -71,3 +71,20 @@ function save_block_6(){
         show_message("error", "Chưa điền đủ thông tin");
     }
 }
+
+function save_block_6_global(){
+    var required = $('#fm-block-6-global input, #fm-block-6-global textarea, #fm-block-6-global select').filter('[required]:visible');
+    var allRequired = true;
+    required.each(function(){
+        if($(this).val() == ''){
+            allRequired = false;
+        }
+    });
+    if(allRequired){
+        save_form_modal('#fm-block-6-global', baseUrl + '/block_six/update_global', '#modal-decoration', '#content-decoration',  baseUrl+'/block_six/json?page='+page_block_6); 
+    }else{
+        show_message("error", "Chưa điền đủ thông tin");
+    }
+}
+
+

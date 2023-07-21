@@ -1,11 +1,26 @@
 <?php
 $jsonObj = $this->jsonObj; $perpage = $this->perpage; $pages = $this->page;
+$json = $this->json;
 ?>
+<div class="row">
+    <form id="fm-block-6-global" method="post">
+        <div class="col-xs-12">
+            <div class="input-group">
+                <input type="text" class="form-control search-query" placeholder="Tiêu đề block"
+                id="title_block_6_global" name="title_block_6_global" value="<?php echo $json[0]['title'] ?>">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-purple btn-sm" onclick="save_block_6_global()">
+                        <span class="ace-icon fa fa-save icon-on-right bigger-110"></span>
+                        Ghi dữ liệu
+                    </button>
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="space-6"></div>
 <div class="dataTables_wrapper form-inline no-footer">
-    <table 
-        id="dynamic-table" 
-        class="table table-striped table-bordered table-hover dataTable no-footer" 
-        role="grid"
+    <table id="dynamic-table" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid"
         aria-describedby="dynamic-table_info">
         <thead>
             <tr role="row">
@@ -29,7 +44,7 @@ $jsonObj = $this->jsonObj; $perpage = $this->perpage; $pages = $this->page;
                 <td class="text-center"><?php echo $row['code'] ?></td>
                 <td class="text-left"><?php echo $row['title'] ?></td>
                 <td class="text-center">
-                    <img src="<?php echo URL.'/public/images/block/'.$row['image'] ?>" height="50"/>
+                    <img src="<?php echo URL.'/public/images/block/'.$row['image'] ?>" height="50" />
                 </td>
                 <td class="text-center">
                     <?php

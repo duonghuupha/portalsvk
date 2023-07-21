@@ -11,6 +11,8 @@ class Block_six extends Controller{
         $offset = ($get_pages-1)*$rows;
         $jsonObj = $this->model->getFetObj($offset, $rows);
         $this->view->jsonObj = $jsonObj; $this->view->perpage = $rows; $this->view->page = $get_pages;
+        $json = $this->model->get_block_6_title();
+        $this->view->json = $json;
         $this->view->render('block_six/json');
     }
 
@@ -112,6 +114,22 @@ class Block_six extends Controller{
             $this->view->jsonObj = [];
         }
         $this->view->render("block_six/form");
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////
+    function update_global(){
+        $title = $_REQUEST['title_block_6_global'];
+        $data = array("title" => $title);
+        $temp = $this->model->updateObj_title($data);
+        if($temp){
+            $jsonObj['msg'] = "Cập nhật dữ liệu thành công";
+            $jsonObj['success'] = true;
+            $this->view->jsonObj = json_encode($jsonObj);
+        }else{
+            $jsonObj['msg'] = "Cập nhật dữ liệu không thành công";
+            $jsonObj['success'] = false;
+            $this->view->jsonObj = json_encode($jsonObj);
+        }
+        $this->view->render("block_six/update_global");
     }
 }
 ?>
