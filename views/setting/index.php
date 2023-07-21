@@ -44,7 +44,7 @@ $item = $this->jsonObj;
                         <div class="form-group">
                             <label for="form-field-username">Quận/Huyện</label>
                             <div>
-                                <input type="text" id="district" name="dsitrict" required="" class="form-control"
+                                <input type="text" id="district" name="district" required="" class="form-control"
                                 placeholder="Quận/Huyện" style="width:100%" value="<?php echo $item[0]['district'] ?>"/>
                             </div>
                         </div>
