@@ -35,13 +35,13 @@ class Block_three_Model extends Model{
         return $query->fetchAll();
     }
 
-    function get_block_6_title(){
-        $query = $this->db->query("SELECT * FROM tbl_block_3_title WHERE id = 1");
+    function get_block_3_title(){
+        $query = $this->db->query("SELECT * FROM tbl_block_3_global WHERE id = 1");
         return $query->fetchAll();
     }
 
     function updateObj_title($data){
-        $query = $this->update("tbl_block_3_title", $data, "id = 1");
+        $query = $this->update("tbl_block_3_global", $data, "id = 1");
         return $query;
     }
 }

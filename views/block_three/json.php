@@ -1,6 +1,38 @@
 <?php
 $jsonObj = $this->jsonObj; $perpage = $this->perpage; $pages = $this->page;
+$json = $this->json;
 ?>
+<div class="row">
+    <form id="fm-block-3-global" method="post">
+        <input id="image_old_block_3_global" name="image_old_block_3_global" type="hidden"
+        value="<?php echo $json[0]['image'] ?>"/>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="form-field-username">Tiêu đề</label>
+                <div>
+                    <input type="text" id="title_block_3_global" name="title_block_3_global" class="form-control" 
+                    style="width:100%" required="" value="<?php echo $json[0]['title'] ?>"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="form-field-username">Hình ảnh (1920 x 700)</label>
+                <div>
+                    <input type="file" id="image_block_3_global" name="image_block_3_global" class="file_attach" 
+                    style="width:100%" onchange="check_size_block_3()"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-sm btn-primary" onclick="save_block_3_global()" type="button">
+                <i class="ace-icon fa fa-save"></i>
+                Ghi dữ liệu
+            </button>
+        </div>
+    </form>
+</div>
+<div class="space-6"></div>
 <div class="dataTables_wrapper form-inline no-footer">
     <table 
         id="dynamic-table" 
@@ -76,3 +108,15 @@ $jsonObj = $this->jsonObj; $perpage = $this->perpage; $pages = $this->page;
         </div>
     </div>
 </div>
+<script type="text/javascript">
+$(function(){
+    $('.file_attach').ace_file_input({
+        no_file:'Không có file ...',
+        btn_choose:'Lựa chọn',
+        btn_change:'Thay đổi',
+        droppable:false,
+        onchange:null,
+        thumbnail:true
+    });
+})
+</script>

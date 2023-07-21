@@ -11,6 +11,8 @@ class Block_three extends Controller{
         $offset = ($get_pages-1)*$rows;
         $jsonObj = $this->model->getFetObj($offset, $rows);
         $this->view->jsonObj = $jsonObj; $this->view->perpage = $rows; $this->view->page = $get_pages;
+        $json = $this->model->get_block_3_title();
+        $this->view->json = $json;
         $this->view->render('block_three/json');
     }
 
@@ -90,6 +92,38 @@ class Block_three extends Controller{
             $this->view->jsonObj = [];
         }
         $this->view->render("block_three/form");
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+    function update_global(){
+        $title = $_REQUEST['title_block_3_global']; $img_old = $_REQUEST['image_old_block_3_global'];
+        $image = ($_FILES['image_block_3_global']['name'] != '') ? $this->_Convert->convert_file($_FILES['image_block_3_global']['name'], 'image_block_3') : $img_old;
+        if($img_old == '' && $_FILES['image_block_3_global']['name'] == ''){
+            $jsonObj['msg'] = "Chưa chọn hình ảnh";
+            $jsonObj['success'] = false;
+            $this->view->jsonObj = json_encode($jsonObj);
+        }else{
+            $data = array("title" => $title, "image" => $image);
+            $temp = $this->model->updateObj_title($data);
+            if($temp){
+                if($_FILES['image_block_3_global']['name'] != ''){
+                    unlink(DIR_UPLOAD.'/images/block/'.$img_old);
+                    if(move_uploaded_file($_FILES['image_block_3_global']['tmp_name'], DIR_UPLOAD.'/images/block/'.$image)){
+                        $jsonObj['msg'] = "Ghi dữ liệu thành công";
+                        $jsonObj['success'] = true;
+                        $this->view->jsonObj  = json_encode($jsonObj);
+                    }else{
+                        $jsonObj['msg'] = "Quá trình tải ảnh gặp lỗi, thông tin tiêu đề đã được lưu";
+                        $jsonObj['success'] = true;
+                        $this->view->jsonObj  = json_encode($jsonObj);
+                    }
+                }else{
+                    $jsonObj['msg'] = "Ghi dữ liệu thành công";
+                    $jsonObj['success'] = true;
+                    $this->view->jsonObj  = json_encode($jsonObj);
+                }
+            }
+        }
+        $this->view->render("block_three/update_global");
     }
 }
 ?>
