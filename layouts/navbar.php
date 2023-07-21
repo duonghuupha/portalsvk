@@ -21,6 +21,16 @@ if(!isset($_SESSION['data'])){
         </div>
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
+                <li class="green dropdown-modal">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0)">
+                        <i class="ace-icon fa fa-flag icon-animated-vertical"></i>
+                        <span class="badge badge-success">
+                            <?php
+                            echo (isset($_SESSION['lang'])) ? 'English' : 'Việt Nam';
+                            ?>
+                        </span>
+                    </a>
+                </li>
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="<?php echo URL.'/' ?>styles/images/Logo.png" alt="Jason's Photo" />
