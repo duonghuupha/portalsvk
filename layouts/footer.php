@@ -46,7 +46,7 @@
 									<div class="form-group">
 										<label for="form-field-username">Tên người dùng</label>
 										<div>
-											<input type="text" id="fullname_pro" name="fullname_pro" required="" 
+											<input type="text" id="fullname_pro" name="fullname_pro" required="" readonly=""
 											placeholder="Tên người dùng" style="width:100%" value="<?php echo $_SESSION['data'][0]['fullname'] ?>"/>
 										</div>
 									</div>
@@ -56,7 +56,7 @@
 										<label for="form-field-username">Mật khẩu</label>
 										<div>
 											<input type="password" id="pass_pro" name="pass_pro"
-											placeholder="Mật khẩu" style="width:100%" />
+											placeholder="Mật khẩu" style="width:100%" required=""/>
 										</div>
 									</div>
 								</div>
@@ -64,7 +64,7 @@
 									<div class="form-group">
 										<label for="form-field-username">Xác nhận mật khẩu</label>
 										<div>
-											<input type="password" id="repass_pro" name="repass_pro"
+											<input type="password" id="repass_pro" name="repass_pro" required=""
 											placeholder="Xác nhận mật khẩu" style="width:100%" />
 										</div>
 									</div>
@@ -73,11 +73,11 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+						<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal" type="button">
 							<i class="ace-icon fa fa-times"></i>
 							Đóng
 						</button>
-						<button class="btn btn-sm btn-primary pull-right" onclick="save_users()">
+						<button class="btn btn-sm btn-primary pull-right" onclick="save_users()" type="button">
 							<i class="ace-icon fa fa-save"></i>
 							Ghi dữ liệu
 						</button>

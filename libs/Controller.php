@@ -32,6 +32,12 @@ class Controller {
         }else{
             if(isset($_REQUEST['url'])){
                 $url = $_REQUEST['url'];
+                $url = explode("/", $url);
+                if($this->_Info[0]['id'] != 1 && $url[0] == 'users'){
+                    session_start();
+                    session_destroy();
+                    header ('Location: '.URL.'/index/login');
+                }
             }else{
                 $url = "index";
             }

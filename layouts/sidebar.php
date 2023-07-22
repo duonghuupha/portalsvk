@@ -64,6 +64,9 @@
             </a>
             <b class="arrow"></b>
         </li>
+        <?php
+        if($this->_Info[0]['id'] == 1){
+        ?>
         <li class="hover">
             <a href="<?php echo URL.'/users' ?>">
                 <i class="menu-icon fa fa-users"></i>
@@ -71,6 +74,9 @@
             </a>
             <b class="arrow"></b>
         </li>
+        <?php
+        }
+        ?>
     </ul><!-- /.nav-list -->
 
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

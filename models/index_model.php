@@ -16,5 +16,10 @@ class Index_Model extends Model{
                                     AND password = '$password' AND status = 1");
         return $query->fetchAll();
     }
+
+    function updateObj($id, $data){
+        $query = $this->update("tbl_users", $data, "id = $id");
+        return $query;
+    }
 }
 ?>

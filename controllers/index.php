@@ -50,5 +50,27 @@ class Index extends Controller{
             header('Location: /');
         }
     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+function update_profile(){
+    $pass = $_REQUEST['pass_pro']; $repass = $_REQUEST['repass_pro'];
+    if(sha1($pass) != sha1($repass)){
+        $jsonObj['msg'] = "Xác nhận mật khẩu không chính xác";
+        $jsonObj['success'] = false;
+        $this->view->jsonObj = json_encode($jsonObj);
+    }else{
+        $data = array("password" => sha1($pass));
+        $temp = $this->model->updateObj($this->_Info[0]['id'], $data);
+        if($temp){
+            $jsonObj['msg'] = "Cập nhật dữ liệu thành công";
+            $jsonObj['success'] = true;
+            $this->view->jsonObj = json_encode($jsonObj);
+        }else{
+            $jsonObj['msg'] = "Cập nhật dữ liệu không thành công";
+            $jsonObj['success'] = false;
+            $this->view->jsonObj = json_encode($jsonObj);
+        }
+    }
+    $this->view->render("index/update_profile");
+}
 }
 ?>

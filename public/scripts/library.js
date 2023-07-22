@@ -497,7 +497,7 @@ function save_users(){
         }
     });
     if(allRequired){
-        save_reject('#fm-users', baseUrl + '/index/updae_profile', baseUrl+'/index/logout'); 
+        save_reject('#fm-users', baseUrl + '/index/update_profile', baseUrl+'/index/logout'); 
     }else{
         show_message("error", "Chưa điền đủ thông tin");
     }
