@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 20, 2023 at 01:07 PM
+-- Generation Time: Jul 22, 2023 at 07:34 AM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.30
 
@@ -45,7 +45,7 @@ INSERT INTO `tbl_block` (`id`, `code`, `title`, `url_file`, `order_block`, `stat
 (2, 1689615167, 'Block 2', 'block_2.php', 2, 1),
 (3, 1689615181, 'Block 3', 'block_3.php', 3, 1),
 (4, 1689615190, 'Block 4', 'block_4.php', 4, 1),
-(5, 1689615198, 'Block 5', 'block_5.php', 5, 0),
+(5, 1689615198, 'Block 5', 'block_5.php', 5, 1),
 (6, 1689615205, 'Block 6', 'block_6.php', 6, 1),
 (7, 1689615214, 'Block 7', 'block_7.php', 7, 0),
 (8, 1689615221, 'Block 8', 'block_8.php', 8, 1),
@@ -105,6 +105,50 @@ INSERT INTO `tbl_block_2` (`id`, `code`, `title`, `image`, `link`, `status`, `cr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_block_3`
+--
+
+CREATE TABLE `tbl_block_3` (
+  `id` int(11) NOT NULL,
+  `code` int(11) NOT NULL,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `link` text COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `create_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_block_3`
+--
+
+INSERT INTO `tbl_block_3` (`id`, `code`, `title`, `content`, `link`, `status`, `create_at`) VALUES
+(1, 1689904927, 'Cân bằng cuộc sống', 'Bí quyết nằm ở những thảo dược tự nhiên giúp bù đắp sự thiếu hụt các hoạt chất sinh học thiết yếu,  cung cấp vitamin và các acid amin cần thiết giúp nâng cao năng lượng của tế bào, tăng sức đề kháng.', '#', 1, '2023-07-21 09:04:03'),
+(2, 1689905093, 'Đội ngũ chuyên gia', 'Chúng tôi hợp tác với những y bác sỹ đầu ngành có nhiều năm kinh nghiệm để nghiên cứu cho ra những công thức tối ưu nhất. Bên cạnh đó, SVK herbal còn tiến hành nghiên cứu và kiểm nghiệm lâm sàng TPCN chứng minh mang lại hiệu quả cho người sử dụng.\r\n                                        ', '#', 1, '2023-07-21 09:04:53'),
+(3, 1689905121, 'Thảo dược tự nhiên', 'Thảo dược tự nhiên đã trở thành một phần không thể thiếu trong tất cả các sản phẩm của SVK Herbal', '#', 1, '2023-07-21 09:05:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_block_3_global`
+--
+
+CREATE TABLE `tbl_block_3_global` (
+  `id` int(11) NOT NULL,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_block_3_global`
+--
+
+INSERT INTO `tbl_block_3_global` (`id`, `title`, `image`) VALUES
+(1, 'Nền tảng khoa học', '1689928037_image_block_3.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_block_4`
 --
 
@@ -121,6 +165,26 @@ CREATE TABLE `tbl_block_4` (
 
 INSERT INTO `tbl_block_4` (`id`, `title`, `type_data`, `link`) VALUES
 (1, 'Sản phẩm của chúng tôi', 0, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_block_5`
+--
+
+CREATE TABLE `tbl_block_5` (
+  `id` int(11) NOT NULL,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_block_5`
+--
+
+INSERT INTO `tbl_block_5` (`id`, `title`, `content`, `image`) VALUES
+(1, 'Người đống sáng lập', 'Chúng tôibao gồm 3 người sáng lập:<br/>\r\nMr. Dominic Scriven<br/>\r\nMr. Cuong Van-Dinh<br/>\r\nMr. Curtis King<br/>\r\nMr. Cuong Van-Dinh là Giám đốc điều hành đầu tiên, Giám đốc điều hành và nhà đầu tư của chúng tôi kể từ năm 2016.', '1689963278_image_block_5.png');
 
 -- --------------------------------------------------------
 
@@ -149,20 +213,20 @@ INSERT INTO `tbl_block_6` (`id`, `code`, `title`, `image`, `link`, `status`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_block_6_title`
+-- Table structure for table `tbl_block_6_global`
 --
 
-CREATE TABLE `tbl_block_6_title` (
+CREATE TABLE `tbl_block_6_global` (
   `id` int(11) NOT NULL,
   `title` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tbl_block_6_title`
+-- Dumping data for table `tbl_block_6_global`
 --
 
-INSERT INTO `tbl_block_6_title` (`id`, `title`) VALUES
-(1, 'Demo');
+INSERT INTO `tbl_block_6_global` (`id`, `title`) VALUES
+(1, 'Đội ngũ chuyên gia');
 
 -- --------------------------------------------------------
 
@@ -330,6 +394,34 @@ INSERT INTO `tbl_menu` (`id`, `code`, `parent_id`, `title`, `type_menu`, `link`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_setting_global`
+--
+
+CREATE TABLE `tbl_setting_global` (
+  `id` int(11) NOT NULL,
+  `time_work` text COLLATE utf8_unicode_ci NOT NULL,
+  `address` text COLLATE utf8_unicode_ci NOT NULL,
+  `district` text COLLATE utf8_unicode_ci NOT NULL,
+  `city` text COLLATE utf8_unicode_ci NOT NULL,
+  `phone` text COLLATE utf8_unicode_ci NOT NULL,
+  `hotline` text COLLATE utf8_unicode_ci NOT NULL,
+  `email` text COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` text COLLATE utf8_unicode_ci NOT NULL,
+  `twiter` text COLLATE utf8_unicode_ci NOT NULL,
+  `instagram` text COLLATE utf8_unicode_ci NOT NULL,
+  `image_logo` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `tbl_setting_global`
+--
+
+INSERT INTO `tbl_setting_global` (`id`, `time_work`, `address`, `district`, `city`, `phone`, `hotline`, `email`, `facebook`, `twiter`, `instagram`, `image_logo`) VALUES
+(1, 'Thứ 2 - Thứ 6: 08:00 - 17:00', '1D/16 Bình Giã, Phường 13', 'Quận Tân Bình', 'Thành phố Hồ Chí Minh', '+84 (28) 730 222 66', '+84 (09) 154 6060', 'svkherbal@gmail.com', '#', '#', '#', '1689928360_img_logo.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_users`
 --
 
@@ -375,9 +467,27 @@ ALTER TABLE `tbl_block_2`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_block_3`
+--
+ALTER TABLE `tbl_block_3`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_block_3_global`
+--
+ALTER TABLE `tbl_block_3_global`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_block_4`
 --
 ALTER TABLE `tbl_block_4`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_block_5`
+--
+ALTER TABLE `tbl_block_5`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -387,9 +497,9 @@ ALTER TABLE `tbl_block_6`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_block_6_title`
+-- Indexes for table `tbl_block_6_global`
 --
-ALTER TABLE `tbl_block_6_title`
+ALTER TABLE `tbl_block_6_global`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -423,6 +533,12 @@ ALTER TABLE `tbl_menu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_setting_global`
+--
+ALTER TABLE `tbl_setting_global`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
@@ -451,9 +567,27 @@ ALTER TABLE `tbl_block_2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `tbl_block_3`
+--
+ALTER TABLE `tbl_block_3`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_block_3_global`
+--
+ALTER TABLE `tbl_block_3_global`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `tbl_block_4`
 --
 ALTER TABLE `tbl_block_4`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_block_5`
+--
+ALTER TABLE `tbl_block_5`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -463,9 +597,9 @@ ALTER TABLE `tbl_block_6`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_block_6_title`
+-- AUTO_INCREMENT for table `tbl_block_6_global`
 --
-ALTER TABLE `tbl_block_6_title`
+ALTER TABLE `tbl_block_6_global`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -497,6 +631,12 @@ ALTER TABLE `tbl_content`
 --
 ALTER TABLE `tbl_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `tbl_setting_global`
+--
+ALTER TABLE `tbl_setting_global`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
