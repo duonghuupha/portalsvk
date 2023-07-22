@@ -30,6 +30,63 @@
 			</div>
 		</div>
 
+		<!--Form don vi tinh-->
+		<div id="modal-users" class="modal fade" data-keyboard="false" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content" id="form">
+					<div class="modal-header no-padding">
+						<div class="table-header">
+							Cập nhật tài khoản
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<form id="fm-users" method="post" enctype="multipart/form-data">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="form-field-username">Tên người dùng</label>
+										<div>
+											<input type="text" id="fullname_pro" name="fullname_pro" required="" 
+											placeholder="Tên người dùng" style="width:100%" value="<?php echo $_SESSION['data'][0]['fullname'] ?>"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label for="form-field-username">Mật khẩu</label>
+										<div>
+											<input type="password" id="pass_pro" name="pass_pro"
+											placeholder="Mật khẩu" style="width:100%" />
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label for="form-field-username">Xác nhận mật khẩu</label>
+										<div>
+											<input type="password" id="repass_pro" name="repass_pro"
+											placeholder="Xác nhận mật khẩu" style="width:100%" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+							<i class="ace-icon fa fa-times"></i>
+							Đóng
+						</button>
+						<button class="btn btn-sm btn-primary pull-right" onclick="save_users()">
+							<i class="ace-icon fa fa-save"></i>
+							Ghi dữ liệu
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- End formm don vi tinh-->
+
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='styles/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>

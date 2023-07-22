@@ -44,7 +44,7 @@ if(!isset($_SESSION['data'])){
                     </a>
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="<?php echo URL.'/profile' ?>">
+                            <a href="javascript:voiid(0)" onclick="update_profile()">
                                 <i class="ace-icon fa fa-user"></i>
                                 Tài khoản
                             </a>

@@ -483,3 +483,22 @@ function exec_del_modal(data_str, url_data, id_div, url_content, modal_id){
         }
     });
 }
+///////////////////////////////////////////////////////////////////////////////////////////////
+function update_profile(){
+    $('#modal-users').modal('show');
+}
+
+function save_users(){
+    var required = $('#fm-users input, #fm-users textarea, #fm-users select').filter('[required]:visible');
+    var allRequired = true;
+    required.each(function(){
+        if($(this).val() == ''){
+            allRequired = false;
+        }
+    });
+    if(allRequired){
+        save_reject('#fm-users', baseUrl + '/index/updae_profile', baseUrl+'/index/logout'); 
+    }else{
+        show_message("error", "Chưa điền đủ thông tin");
+    }
+}
